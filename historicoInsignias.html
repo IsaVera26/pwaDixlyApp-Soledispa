@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Insignias Ganadas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/ui.css">
+    <link rel="stylesheet" href="css/vistas/index.css">
+    <style>
+        body {
+            background: var(--bg-soft, #f8f8f8);
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Lexend', Arial, sans-serif;
+        }
+        .historico-container {
+            max-width: 500px;
+            margin: 2rem auto;
+            background: #fff;
+            border-radius: 1.2rem;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+            padding: 2rem 1.2rem;
+        }
+        h1 {
+            text-align: center;
+            font-size: 1.6rem;
+            margin-bottom: 1.5rem;
+        }
+        .insignia-lista {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.2rem;
+        }
+        .insignia-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: #faf7f1;
+            border-radius: 0.8rem;
+            padding: 1.2rem 0.5rem 0.8rem 0.5rem;
+            min-height: 140px;
+            min-width: 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.16),
+    0 2px 6px rgba(0, 0, 0, 0.11);
+            box-sizing: border-box;
+        }
+        .insignia-img {
+            width: 60%;
+            height: 70%;
+            object-fit: contain;
+            /* margin-bottom: 0.5rem; */
+        }
+        .insignia-info {
+            flex: none;
+            text-align: center;
+        }
+ 
+        .insignia-info {
+            flex: 1;
+        }
+        .insignia-nombre {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        .insignia-fecha {
+            font-size: 0.95rem;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <div class="historico-container">
+        <h1>Histórico de Insignias</h1>
+        <div class="insignia-lista">
+            <!-- Las insignias se cargarán aquí dinámicamente -->
+        </div>
+    </div>
+
+    <!-- Bottom Navigation Bar -->
+    <nav class="bottom-nav" >
+        <button class="nav-item"  onclick="window.location.href='index.html'">
+            <span style="font-size:1.5rem;">🎮</span>
+            <span>Juegos</span>
+        </button>
+        <button class="nav-item active"  onclick="window.location.href='historicoInsignias.html'">
+            <span style="font-size:1.5rem;">🏅</span>
+            <span>Insignias</span>
+        </button>
+    </nav>
+    <script src="js/historicoInsignias.js"></script>
+</body>
+</html>
